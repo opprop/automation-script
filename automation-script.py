@@ -24,9 +24,9 @@ def Run_inference():
     for project in projects:
  
         os.chdir(file_dir + '/corpus/' + project)    
-        #os.system(projects[project]['clean'])                                   #Clean projects
-        ##os.system(file_dir + '/ontology/run-dljc.sh ' 
-        #+ projects[project]['build'])                                           #Build projects
+        os.system(projects[project]['clean'])                                   #Clean projects
+        os.system(file_dir + '/ontology/run-dljc.sh ' 
+        + projects[project]['build'])                                           #Build projects
        
         with open('solver-statistic.json') as data_file:
             json_keys = json.load(data_file)                                                    

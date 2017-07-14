@@ -15,7 +15,6 @@ with open('corpus.json') as json_file:
     projects = json_object['projects']
 
 def Run_inference():
-
     infer_result = {}
     with open('corpus.json') as json_file:
         json_object = json.load(json_file)
@@ -82,7 +81,6 @@ def Generate_graph(data):
         line_chart.render_in_browser()
 
 def Generate_csv():
-
     metrics_filter = []
     for project in projects:
         os.chdir(file_dir + '/corpus/' + project)
